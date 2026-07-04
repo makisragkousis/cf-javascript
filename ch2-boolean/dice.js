@@ -7,4 +7,4 @@ do {
     console.log(`Try ${times}: dice: ${dice}`)
 } while (dice !== 6);
 
-console.log(`It took ${times} to get 6`)
+console.log(`It took ${times} times to get 6`)
