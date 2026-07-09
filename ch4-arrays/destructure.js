@@ -16,4 +16,6 @@ console.log(others);
 let a = 10;
 let b = 20;
 
-[a, b] = [b, a];         // destructure
+[a, b] = [b, a];         // destructure - πρώτα εκτελείται το δεξιά μέρος
+console.log('a=' + a);
+console.log('b=' + b);
