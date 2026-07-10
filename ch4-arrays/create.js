@@ -8,7 +8,7 @@ const arr3 = [,,,];                           // length is 3 (number of comas)
 const arr4 = Array(3);                        // length 3 με empty elements
 const arr5 = Array(2, 3, 5, 8);               // 4 elements
 const grid = [[1, 2], [3, 4], [5, 6]];
-const ogjArr = [ {id: 1}, {id: 2}, {id: 3} ];
+const objArr = [ {id: 1}, {id: 2}, {id: 3} ];
 
 console.log(arr1[0]);         // 1
 
