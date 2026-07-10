@@ -2,7 +2,7 @@ let str = 'Coding Factory';
 
 // charAt
 console.log(str.charAt(1));       // o
-console.log(str.charAt(100));     // ' '
+console.log(str.charAt(100));     // ''
 console.log(str[100]);            // undefined
 
 // indexOf
