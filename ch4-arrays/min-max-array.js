@@ -1,7 +1,7 @@
 const ages = [20, 30, 50, 18, 34];
 
 function getMin(arr) {
-    if (!Array.isArray(ages) || arr.length === 0) return;
+    if (!Array.isArray(arr) || arr.length === 0) return;
 
     let minVal = Math.min(...arr);
     let minPosition = arr.indexOf(minVal);
@@ -9,7 +9,7 @@ function getMin(arr) {
 }
 
 function getMin2(...arr) {
-    if (!Array.isArray(ages) || arr.length === 0) return;
+    if (!Array.isArray(arr) || arr.length === 0) return;
 
     let minVal = Math.min(...arr);
     let minPosition = arr.indexOf(minVal);
