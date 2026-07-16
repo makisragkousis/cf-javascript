@@ -1,64 +1,93 @@
-// Άσκηση 1
+// Άσκηση
 // Μία συνάρτηση που να παίρνει ένα πίνακα
-// αριθμών και να επιστρέγει το μεγαλύτερο
-// αριθμό χωρίς την Math.max
+// αριθμών και να επιστρέφει το μεγαλύτερο
+// αριθμό, χωρίς την Math.max
 
 function findMax(arr) {
-    if (!Array.isArray(arr) || arr.length === 0) return;
+    if (!Array.isArray(arr) || arr.length === 0) {
+        return
+    }
 
-    let max = -Infinity;
-
-    for (const el of arr) {
-        if (el > max) {
-            max = el;
+    let max = -Infinity
+    for (const element of arr) {
+        if (element > max) {
+            max = element
         }
     }
-    return max;
+    return max
 }
 
-console.log(findMax([13, 5, 78 , 42]));
+console.log(findMax([13, 5, 78, 42]))
 
 
 // Άσκηση 2
 // Μία συνάρτηση που λαμβάνει ως είσοδο
-// έναν πίνακα αριθμών και επιστρέφει τον
-// μέσο όρο.
+// ένα πίνακα αριθμών και επιστρέφει τον
+// μέσο όρο
 
 function findAvg(arr) {
-    if (!Array.isArray(arr) || arr.length === 0) return;
-
-    let sum = 0;
-
-    for (const num of arr) {
-        sum += num;
+    if (!Array.isArray(arr) || arr.length === 0) {
+        return
     }
 
-    return sum / arr.length;
+    let sum = 0
+    for (const num of arr) {
+        sum += num
+    }
+
+    return sum / arr.length
 }
 
 // Functional Solution
 function findAvg2(arr) {
-    if (!Array.isArray(arr) || arr.length === 0) return;
+    if (!Array.isArray(arr) || arr.length === 0) {
+        return
+    }
 
-    return arr.reduce((total, num) => total + num, 0) / arr.length;
+    return arr.reduce((total, num) => total + num, 0)  / arr.length
 }
-
-console.log(findAvg([13, 5, 78 , 42]));
-console.log(findAvg2([13, 5, 78 , 42]));
-
 
 // Άσκηση 3
-// Μία συνάρτηση που ελέγχει (επιστρέφει true/false)
-// αν δύο πίνακες είναι ίσοι: ίδιο μήκος και ίδια στοιχεία.
+// Μία συνάρτηση που ελέγχει (επιστρέφει true/false) 
+// αν δύο πίνακες είναι ίσοι: ίδιο μήκος και ίδια στοιχεία
 
-function areArraysEqual(arr1, arr2) {
-    if (!Array.isArray(arr1) || arr1.length === 0) return false;
-    if (!Array.isArray(arr2) || arr2.length === 0) return false;
-
-    if (arr1.length !== arr2.length) return false;
-
-    for (let i = 0; i < arr1.lengthl; i++) {
-        if (arr1[i] !== arr2[i]) return false;
+function equalArrays(arr1, arr2) {
+    if (!Array.isArray(arr1) || arr1.length === 0) {
+        return false
     }
-    return true;
+
+    if (!Array.isArray(arr2) || arr2.length === 0) {
+        return false
+    }
+
+    if (arr1.length !== arr2.length) return false
+
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== arr2[i]) return false
+    }
+    return true
 }
+
+console.log(equalArrays([1, 2, 3, 3], [1, 2, 3, 4]))
+
+// Άσκηση 4
+// Μία συνάρτηση που λαμβάνει ως είσοδο
+// ένα πίνακα και μία τιμή και επιστρέφει
+// ένα νέο πίνακα (ο αρχικός δεν αλλάζει) 
+// χωρίς να εμφανίζει την τιμή αυτή.
+
+function removeAllOccurances(arr, valueToRemove) {
+    return arr.filter(value => value !== valueToRemove)
+}
+
+// function newArray(arr, value) {
+//     if (!Array.isArray(arr) || arr.length === 0) {
+//         return
+//     }
+
+//     for (const el of arr) {
+//         if (el === value) {
+//             arr
+//         }
+//     }
+// }
