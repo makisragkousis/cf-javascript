@@ -14,4 +14,4 @@ numbers.sort(function(a,b) {
     return a - b;
 })
 
-numbers.sort((a, b) => b -a);     // Descending
+numbers.sort((a, b) => b - a);     // Descending
