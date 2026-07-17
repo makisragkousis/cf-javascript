@@ -5,9 +5,7 @@ let book2Author = book2.author.lastname;
 
 if (book2) {
     if (book2.author) {
-        if (book2.author.lastname) {
-            authorLast = book2.author.lastname;
-        }
+        authorLast = book2.author.lastname;
     }
 }
 
@@ -15,3 +13,7 @@ authorLast = book2?.author?.lastname;        // returns undefined
 
 // Nullish coalescing operator -- elvis operator
 authorLast = book2?.author?.lastname ?? "Unknown";
+
+if (book.hasOwnProperty('author')) {
+    console.log(book.author);
+}
