@@ -83,9 +83,9 @@ function removeAllOccurances(arr, valueToRemove) {
 function removeAllOccurances2(arr, valueToRemove) {
     let newArr = [];
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] !== valueToRemove) {
-            newArr.push(arr[i]);
+    for (const el of arr) {
+        if (el !== valueToRemove) {
+            newArr.push(el);
         }
     }
     return newArr;
