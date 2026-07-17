@@ -80,14 +80,13 @@ function removeAllOccurances(arr, valueToRemove) {
     return arr.filter(value => value !== valueToRemove)
 }
 
-// function newArray(arr, value) {
-//     if (!Array.isArray(arr) || arr.length === 0) {
-//         return
-//     }
+function removeAllOccurances2(arr, valueToRemove) {
+    let newArr = [];
 
-//     for (const el of arr) {
-//         if (el === value) {
-//             arr
-//         }
-//     }
-// }
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== valueToRemove) {
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+}
