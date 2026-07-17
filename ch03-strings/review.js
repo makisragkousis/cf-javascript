@@ -108,7 +108,7 @@ function wordCount(text, str) {
     for (const word of words) {
         if (word === searchedTerm) times++;
     }
-    return times++;
+    return times;
 }
 
 function wordCount2(text, str) {
