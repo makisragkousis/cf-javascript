@@ -90,3 +90,27 @@ function removeAllOccurances2(arr, valueToRemove) {
     }
     return newArr;
 }
+
+
+// Άσκηση 5
+// Μία συνάρτησηπου βρίσκει το 2ο μεγαλύτερο αριθμό
+// ενός πίνακα. [7, 7, 4] ο 2ος μεγαλύτερος είναι το 4
+
+function findSecondMax(arr) {
+    if (!Array,isArray(arr) || arr.length < 2) {
+        return;
+    }
+
+    let firstMax = -Infinity;
+    let secondMax = -Infinity;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > firstMax) {
+            secondMax = firstMax;
+            firstMax = arr[i];
+        } else if (arr[i] > secondMax && arr[i] !== firstMax) {
+            secondMax = arr[i];
+        }
+    }
+    return secondMax;
+}
