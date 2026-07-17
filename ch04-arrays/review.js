@@ -96,7 +96,7 @@ function removeAllOccurances2(arr, valueToRemove) {
 // Μία συνάρτησηπου βρίσκει το 2ο μεγαλύτερο αριθμό
 // ενός πίνακα. [7, 7, 4] ο 2ος μεγαλύτερος είναι το 4
 
-function findSecondMax(arr) {
+function secondMax(arr) {
     if (!Array,isArray(arr) || arr.length < 2) {
         return;
     }
@@ -113,4 +113,10 @@ function findSecondMax(arr) {
         }
     }
     return secondMax;
+}
+
+function secondMax2(arr) {
+    const uniqueNumbers = [...new Set(arr)];
+    uniqueNumbers.sort((a, b) => b - a);
+    return uniqueNumbers;
 }
