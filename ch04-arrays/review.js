@@ -129,9 +129,9 @@ function secondMax2(arr) {
 
 function shiftLeft(arr, offset) {
     let shiftedArr = [];
-    const normalizesOffset = offset % arr.length;
+    const normalizedOffset = offset % arr.length;
 
     for (let i = 0; i < arr.length; i++) {
-        shiftedArr[(i - normalizesOffset + arr.length) % arr.length] = arr[i];
+        shiftedArr[(i - normalizedOffset + arr.length) % arr.length] = arr[i];
     }
 }
