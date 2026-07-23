@@ -76,3 +76,20 @@ function printEntries(obj) {
 function printEntries2(obj) {
     Object.entries(obj).forEach(([key, value]) => console.log(`${key}, ${value}`))
 }
+
+
+// Έστω το παρακάτω bankAccount obj.
+// Προσθέστε δύο μεθόδους: deposit & withdraw
+
+const bankAccount = {
+    owner: "Alice",
+    balance: 500,
+    deposit(amount) {
+        if (amount <= 0) return;
+        this.balance += amount;
+    },
+    withdraw(amount) {
+        if (amount <= 0 || amount > this.balance) return;
+        this.balance -= amount;
+    }
+}
