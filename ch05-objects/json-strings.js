@@ -12,7 +12,6 @@ const jsObject2 = JSON.parse(jsonString);
 console.log(jsObject2);
 
 
-const jsStr = ` [
-{"id": "pro1"}, {"id": "pro2"}, {"id": "pro3"}, {"id": "pro4"}]`
+const jsStr = `[{"id": "pro1"}, {"id": "pro2"}, {"id": "pro3"}, {"id": "pro4"}]`
 
 console.log(JSON.parse(jsStr));
