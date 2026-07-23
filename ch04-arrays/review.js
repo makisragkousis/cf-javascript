@@ -118,7 +118,7 @@ function secondMax(arr) {
 function secondMax2(arr) {
     const uniqueNumbers = [...new Set(arr)];
     uniqueNumbers.sort((a, b) => b - a);
-    return uniqueNumbers;
+    return uniqueNumbers[1];
 }
 
 
