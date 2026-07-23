@@ -97,7 +97,7 @@ function removeAllOccurances2(arr, valueToRemove) {
 // ενός πίνακα. [7, 7, 4] ο 2ος μεγαλύτερος είναι το 4
 
 function secondMax(arr) {
-    if (!Array,isArray(arr) || arr.length < 2) {
+    if (!Array.isArray(arr) || arr.length < 2) {
         return;
     }
 
