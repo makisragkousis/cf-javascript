@@ -78,6 +78,7 @@ function printEntries2(obj) {
 }
 
 
+// Άσκηση 4
 // Έστω το παρακάτω bankAccount obj.
 // Προσθέστε δύο μεθόδους: deposit & withdraw
 
@@ -92,4 +93,57 @@ const bankAccount = {
         if (amount <= 0 || amount > this.balance) return;
         this.balance -= amount;
     }
+}
+
+
+// Άσκηση 5
+// Μία συνάρτηση που να επιστρέφει το product
+// με το max price
+
+const products = [
+    {name: 'mouse', price: 50},
+    {name: 'keyboard', price: 80},
+    {name: 'cpu', price: 500}
+]
+
+function findMostExpensive(products) {
+    if (!Array.isArray(products)) return;
+    if (products.length === 0) return;
+
+    let mostExpensive = products[0];
+    
+    for (const product of products) {
+        if (product.price > mostExpensive.price) {
+            mostExpensive = product;
+        }
+    }
+    return mostExpensive;
+}
+
+
+// Άσκηση 6
+// Μία συνάρτηση που να επιστρέφει object
+// με γκρουπάρισμα ανά city των users
+
+const users = [
+    {firstname: 'Alice', city: 'Athens'},
+    {firstname: 'Bob', city: 'Patra'},
+    {firstname: 'Costas', city: 'Athens'},
+    {firstname: 'Dimitris', city: 'Patra'},
+    {firstname: 'Elon', city: 'Athens'},
+    {firstname: 'Franks', city: 'Patra'}
+]
+
+// {Athens: ['Alice', 'Costas', 'Elon'], Patra: ['Bob', 'Dimitris', 'Frank']}
+
+function groupByCity(users) {
+    const groups = {};
+
+    for (const user of users) {
+        if (!(user.city in groups)) {
+            groups[user.city] = [];
+        }
+        groups[user.city].push(user.firstname);
+    }
+    return groups;
 }
