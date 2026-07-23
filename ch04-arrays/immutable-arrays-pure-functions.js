@@ -22,7 +22,7 @@ numbers.splice(3, 1, 8);         // in place
 
 // Immutable update
 const updateAtArrayIndex = (arr, index, newValue) => {
-    arr.map((item, i) => (i === index) ? newValue : item);
+    return arr.map((item, i) => (i === index) ? newValue : item);
 }
 
 const updateAll = (arr, newValue) => arr.map(item => newValue);
