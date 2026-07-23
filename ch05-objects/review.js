@@ -28,7 +28,6 @@ function getPropertyValue(obj, propertyName) {
 
 console.log(getPropertyValue(null, "id"));
 
-
 // Άσκηση 1c
 // Μία συνάρτηση getPropertyValue(obj, propertyName)
 // που επιστρέφει την τιμή της ιδιότητας με αυτό
@@ -44,4 +43,21 @@ function getPropertyValue(obj, propertyName) {
     return Object.hasOwn(obj, propertyName)
         ? obj[propertyName]
         : undefined
+}
+
+
+// Άσκηση 2
+// Μία συνάρτηση που αθροίζει τις τιμές των
+// ιδιοτήτων ενός object
+
+function sumValues(obj) {
+    let sum = 0;
+    for (const value of Object.values(obj)) {
+        sum += value
+    }
+    return sum;
+}
+
+function sumValues2(obj) {
+    return Object.values(obj).reduce((sum, value) => sum + value, 0);
 }
