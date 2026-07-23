@@ -1,6 +1,6 @@
 const user = {
     id: 1,
-    firstname:"Bob",
+    firstname: "Bob",
     lastname: "D."
 }
 
