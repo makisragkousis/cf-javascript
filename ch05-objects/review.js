@@ -61,3 +61,18 @@ function sumValues(obj) {
 function sumValues2(obj) {
     return Object.values(obj).reduce((sum, value) => sum + value, 0);
 }
+
+
+// Άσκηση 3
+// Μία συνάρτηση που να εκτυπώνει τα key, value
+// ενός obj
+
+function printEntries(obj) {
+    for (const [key, value] of Object.entries(obj)) {
+        console.log(key + ": " + value)
+    }
+}
+
+function printEntries2(obj) {
+    Object.entries(obj).forEach(([key, value]) => console.log(`${key}, ${value}`))
+}
