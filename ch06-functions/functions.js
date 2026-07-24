@@ -33,5 +33,5 @@ function createButton2(text, color = 'blue') {
 }
 
 createButton2('Hello');              // Hello blue
-createButton2('Hello', 'Coding');    // Hello Coding
+createButton2('Hello', 'red');       // Hello red
 createButton2('Hello', '');          // Hello
