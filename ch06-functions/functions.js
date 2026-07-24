@@ -18,7 +18,6 @@ const multiply = (a, b) => a * b;
 console.log(multiply(4, 6));
 
 // Optional Params
-// Λειτουργούν ως overload
 function createButton(text, color) {
     color = color || 'blue';
     console.log(text, color);
@@ -28,6 +27,7 @@ createButton('Hello');
 createButton('Hello', '');
 
 // Default Params -- ES6
+// Λειτουργούν ως overload
 function createButton2(text, color = 'blue') {
     console.log(text, color);
 }
