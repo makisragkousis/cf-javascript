@@ -117,3 +117,12 @@ console.log(hello2('Bob'));
 const hello2 = (name) => `Hello ${name}`;
 
 
+// Callbacks
+function processUser(username, callback) {
+    console.log(`Processing data of user ${username}`);
+    callback(username);
+}
+
+processUser('online-user', (user) => {
+    console.log(`Data received for user ${user}`);
+})
