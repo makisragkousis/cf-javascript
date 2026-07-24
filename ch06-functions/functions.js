@@ -91,3 +91,17 @@ function gradesSum(grades) {
     }
     // for .....
 }
+
+
+// Arrow Function --  Implivit return
+const square = (n) => n * n;      // Implicit return: curly braces & return
+console.log(square(5));
+
+// Explicit return
+const cube = (n) => {
+    const result = n * n * n;
+    return result;
+}
+
+// Implicit return of object
+const createUser = (username, role) => ({username: username, role: role});
