@@ -105,3 +105,15 @@ const cube = (n) => {
 
 // Implicit return of object
 const createUser = (username, role) => ({username: username, role: role});
+
+
+// Hoisting
+console.log(hello('Alice'));
+function hello(name) {
+    return `Hello ${name}`;
+}
+
+console.log(hello2('Bob'));
+const hello2 = (name) => `Hello ${name}`;
+
+
