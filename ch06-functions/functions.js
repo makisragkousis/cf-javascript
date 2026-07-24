@@ -16,3 +16,22 @@ console.log(add(3, 8));
 const multiply = (a, b) => a * b;
 
 console.log(multiply(4, 6));
+
+// Optional Params
+// Λειτουργούν ως overload
+function createButton(text, color) {
+    color = color || 'blue';
+    console.log(text, color);
+}
+
+createButton('Hello');
+createButton('Hello', '');
+
+// Default Params -- ES6
+function createButton2(text, color = 'blue') {
+    console.log(text, color);
+}
+
+createButton2('Hello');              // Hello blue
+createButton2('Hello', 'Coding');    // Hello Coding
+createButton2('Hello', '');          // Hello
