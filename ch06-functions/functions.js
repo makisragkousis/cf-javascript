@@ -86,7 +86,7 @@ function getFirstHobby2(user) {
 
 // for arrays
 function gradesSum(grades) {
-    if (!Array,isArray(grades) || grades.length === 0) {
+    if (!Array.isArray(grades) || grades.length === 0) {
         return;
     }
     // for .....
