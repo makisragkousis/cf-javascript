@@ -19,5 +19,5 @@ export function strikeThrough(key) {
 }
 
 export function deleteNote(key) {
-  notes = notes.filter((noteObj) => noteObj !== key);
+  notes = notes.filter((noteObj) => noteObj.key !== key);
 }
